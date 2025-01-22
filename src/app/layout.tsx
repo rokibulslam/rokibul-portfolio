@@ -1,8 +1,5 @@
-import { Inter } from "next/font/google";
+import { Header } from "@/components/home-page/Header";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
   title: "Your Portfolio",
   description: "A stunning portfolio showcasing your web development projects",
@@ -15,7 +12,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <div>
+        <body className="mx-20">
+          <Header />
+          {children}
+        </body>
+      </div>
     </html>
   );
 }

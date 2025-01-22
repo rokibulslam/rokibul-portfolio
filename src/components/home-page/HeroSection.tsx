@@ -1,7 +1,7 @@
 import Image from "next/image";
 export function HeroSection() {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-12 bg-white">
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between  py-12 bg-white">
       {/* Text Section */}
       <div className="md:w-1/2 text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">

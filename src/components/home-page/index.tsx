@@ -1,13 +1,13 @@
 import ProjectCard from "../projects/projectCard";
-import { Header } from "./Header";
 import { HeroSection } from "./HeroSection";
+import { PricingPlans } from "./subscription";
 
 export const Home = () => {
   return (
     <div>
-      <Header />
       <HeroSection />
       <ProjectCard />
+      <PricingPlans />
     </div>
   );
 };
