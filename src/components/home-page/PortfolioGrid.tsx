@@ -70,7 +70,7 @@ const PortfolioGrid = () => {
                 <Button asChild>
                   <Link href={project.liveSite}>Live Site</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button asChild>
                   <Link href={project.githubLink}>GitHub</Link>
                 </Button>
               </div>

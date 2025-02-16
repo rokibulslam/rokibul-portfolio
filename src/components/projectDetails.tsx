@@ -8,12 +8,12 @@ export const ProjectDetails = () => {
   const [selectedImage, setSelectedImage] = useState(0);
 
   const images = [
-    "/api/placeholder/1200/600",
-    "/api/placeholder/1200/600",
-    "/api/placeholder/1200/600",
-    "/api/placeholder/1200/600",
-    "/api/placeholder/1200/600",
-    "/api/placeholder/1200/600",
+    "https://i.ibb.co.com/7Q4t7HM/orboroi-industry.png",
+    "https://i.ibb.co.com/7Q4t7HM/orboroi-industry.png",
+    "https://i.ibb.co.com/7Q4t7HM/orboroi-industry.png",
+    "https://i.ibb.co.com/7Q4t7HM/orboroi-industry.png",
+    "https://i.ibb.co.com/7Q4t7HM/orboroi-industry.png",
+    "https://i.ibb.co.com/7Q4t7HM/orboroi-industry.png",
   ];
 
   const features = [
@@ -55,20 +55,24 @@ export const ProjectDetails = () => {
       </p>
 
       <div className="mb-8">
-        <div className="bg-gray-100 rounded-lg p-4 mb-4">
-          <img
-            src={images[selectedImage]}
-            alt={`Preview ${selectedImage + 1}`}
-            className="w-full rounded-lg mb-4"
-          />
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+        <div className="bg-gray-100 rounded-lg p-4 mb-4 grid grid-cols-12">
+          <div className="col-span-10 flex justify-center items-center h-[500px] w-full overflow-scroll">
+            <img
+              src={images[selectedImage]}
+              alt={`Preview ${selectedImage + 1}`}
+              className=" rounded-lg mb-4"
+            />
+          </div>
+          <div className="col-span-2 overflow-scroll h-[500px] flex justify-center items-center gap-5 flex-col">
             {images.map((img, index) => (
               <img
+                width={100}
+                height={50}
                 key={index}
                 src={img}
                 alt={`Thumbnail ${index + 1}`}
                 className={`cursor-pointer rounded-lg transition-all ${
-                  selectedImage === index ? "ring-2 ring-blue-500" : ""
+                  selectedImage === index ? "p-2 ring-2 ring-blue-500" : ""
                 }`}
                 onClick={() => setSelectedImage(index)}
               />
